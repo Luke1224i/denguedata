@@ -22,6 +22,19 @@ function calcularMedia(valores) {
     return total / valores.length;
 }
 
+function calcularVariacao(ano) {
+    const anoAnterior = Number(ano) - 1;
+
+    if (!dadosPorAno[anoAnterior]) {
+        return null;
+    }
+
+    const totalAtual = dadosPorAno[ano].reduce((soma, valor) => soma + valor, 0);
+    const totalAnterior = dadosPorAno[anoAnterior].reduce((soma, valor) => soma + valor, 0);
+
+    return ((totalAtual - totalAnterior) / totalAnterior) * 100;
+}
+
 document.getElementById("mediaCasos").textContent =
     Math.round(calcularMedia(dadosPorAno[2026])).toLocaleString("pt-BR");
 
@@ -81,6 +94,12 @@ filtroAno.addEventListener("change", function() {
 
     document.getElementById("mediaCasos").textContent =
         Math.round(calcularMedia(dadosPorAno[anoSelecionado])).toLocaleString("pt-BR");
+
+    const variacao = calcularVariacao(anoSelecionado);
+
+    document.getElementById("variacao").textContent =
+        variacao === null ? "N/A" :
+        (variacao > 0 ? "+" : "") + variacao.toFixed(1) + "%";
 
     graficoDengue.update();
 });
