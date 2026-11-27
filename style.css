@@ -199,3 +199,26 @@ footer {
 #statusDados {
     margin-bottom: 15px;
 }
+
+.botao-exportar {
+    margin-top: 20px;
+    padding: 12px 18px;
+    background-color: #0d9488;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-exportar:hover {
+    background-color: #0f766e;
+    transform: translateY(-2px);
+}
+
+.aviso-exportacao {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #6b7280;
+}
