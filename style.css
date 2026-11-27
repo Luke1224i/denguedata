@@ -103,3 +103,40 @@ footer {
         transform: translateY(0);
     }
 }
+.grafico {
+    background-color: white;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.grafico h2 {
+    margin-bottom: 20px;
+}
+.controle-grafico {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.controle-grafico label {
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.controle-grafico select {
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #1f2937;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.controle-grafico select:focus {
+    outline: 2px solid #0d9488;
+    border-color: #0d9488;
+}
