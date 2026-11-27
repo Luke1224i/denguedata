@@ -140,3 +140,62 @@ footer {
     outline: 2px solid #0d9488;
     border-color: #0d9488;
 }
+
+.fonte-dados {
+    background-color: #ffffff;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.fonte-dados h2 {
+    margin-bottom: 15px;
+    color: #0d9488;
+}
+
+.fonte-dados p {
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.filtros div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.filtros label {
+    font-weight: 600;
+    color: #374151;
+}
+
+.filtros select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.fonte-dados a {
+    color: #0d9488;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.fonte-dados a:hover {
+    text-decoration: underline;
+}
+
+#statusDados {
+    margin-bottom: 15px;
+}
