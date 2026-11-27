@@ -33,3 +33,11 @@ Ministério da Saúde — Dados públicos epidemiológicos.
 ## Status
 
 🚧 Projeto em desenvolvimento. 🚧
+
+## Planejamento inicial
+
+- [ ] Identificar fontes de dados públicos sobre dengue.
+- [ ] Organizar os dados para análise.
+- [ ] Criar gráficos e indicadores.
+- [ ] Desenvolver uma interface para visualização dos dados.
+- [ ] Testar e documentar o projeto.
