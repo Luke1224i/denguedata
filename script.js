@@ -11,7 +11,20 @@ const dadosPorAno = {
     2024: [100, 180, 280, 320, 240, 150, 90, 70, 100, 130, 180, 250],
     2025: [80, 150, 260, 290, 220, 120, 80, 60, 90, 140, 200, 270],
     2026: [120, 190, 300, 250, 180, 90, 70, 60, 110, 150, 210, 280]
+    
 };
+
+function calcularMedia(valores) {
+    const total = valores.reduce(function(soma, valor) {
+        return soma + valor;
+    }, 0);
+
+    return total / valores.length;
+}
+
+document.getElementById("mediaCasos").textContent =
+    Math.round(calcularMedia(dadosPorAno[2026])).toLocaleString("pt-BR");
+
 const grafico = document.getElementById("graficoDengue");
 
 const graficoDengue = new Chart(grafico, {
@@ -64,8 +77,10 @@ filtroAno.addEventListener("change", function() {
     const anoSelecionado = filtroAno.value;
 
     graficoDengue.data.datasets[0].data = dadosPorAno[anoSelecionado];
+    graficoDengue.data.datasets[0].label = "Casos de dengue - " + anoSelecionado;
 
-graficoDengue.data.datasets[0].label = "Casos de dengue - " + anoSelecionado;
+    document.getElementById("mediaCasos").textContent =
+        Math.round(calcularMedia(dadosPorAno[anoSelecionado])).toLocaleString("pt-BR");
 
-graficoDengue.update();
+    graficoDengue.update();
 });
