@@ -19,29 +19,29 @@
         <section class="introducao">
             <h2>Monitoramento da Dengue</h2>
             <p>
-                Acompanhe informações e indicadores relacionados
-                à dengue para compreender melhor a situação epidemiológica.
+                Acompanhe os registros de dengue de 2026 e visualize
+                sua distribuição mensal e por estado.
             </p>
         </section>
 
         <section class="indicadores">
             <div class="card">
-                <h3>Casos registrados</h3>
+                <h3>Registros analisados</h3>
                 <p id="casos">--</p>
             </div>
 
             <div class="card">
-                <h3>Óbitos registrados</h3>
+                <h3>Óbitos preliminares</h3>
                 <p id="obitos">--</p>
             </div>
 
             <div class="card">
-                <h3>Média mensal de casos</h3>
+                <h3>Média mensal</h3>
                 <p id="mediaCasos">--</p>
             </div>
 
             <div class="card">
-                <h3>Variação anual</h3>
+                <h3>Variação mensal</h3>
                 <p id="variacao">--</p>
             </div>
 
@@ -51,18 +51,16 @@
             </div>
         </section>
 
-        <!-- GRÁFICO PRINCIPAL E FILTROS -->
+        <!-- GRÁFICO PRINCIPAL -->
         <section class="grafico">
 
             <div class="controle-grafico">
-                <h2>Casos de dengue por mês</h2>
+                <h2>Registros por mês - 2026</h2>
 
                 <div class="filtros">
                     <div>
                         <label for="filtroAno">Ano:</label>
                         <select id="filtroAno">
-                            <option value="2024">2024</option>
-                            <option value="2025">2025</option>
                             <option value="2026" selected>2026</option>
                         </select>
                     </div>
@@ -80,41 +78,80 @@
                 </div>
             </div>
 
-            <canvas id="graficoDengue"></canvas>
+            <div class="grafico-container">
+                <canvas id="graficoDengue"></canvas>
+            </div>
 
         </section>
 
-        <!-- GRÁFICO COMPARATIVO E EXPORTAÇÃO -->
+        <!-- DISTRIBUIÇÃO MENSAL -->
         <section class="grafico">
 
-            <h2>Comparativo anual</h2>
+            <h2>Distribuição mensal</h2>
 
             <p>
-                Comparação da distribuição mensal de casos
-                entre os anos monitorados.
+                Visualização da distribuição dos registros de dengue
+                ao longo dos meses de 2026.
             </p>
 
-            <canvas id="graficoComparativo"></canvas>
+            <div class="grafico-container">
+                <canvas id="graficoComparativo"></canvas>
+            </div>
 
             <button id="exportarCSV" class="botao-exportar">
                 Exportar dados para CSV
             </button>
 
             <p class="aviso-exportacao">
-                Exportação dos dados simulados para fins demonstrativos.
+                Exportação dos registros conforme o filtro selecionado.
             </p>
 
         </section>
 
         <!-- INFORMAÇÕES -->
         <section class="informacao">
-            <h2>Sobre os dados</h2>
+            <h2>Sobre o projeto</h2>
 
             <p>
-                Os dados epidemiológicos são importantes para acompanhar
-                a evolução da dengue e auxiliar na conscientização
-                e prevenção da doença.
+                O DengueData é um dashboard desenvolvido para visualizar
+                registros epidemiológicos de dengue, facilitando a
+                compreensão da distribuição dos dados ao longo do tempo
+                e entre estados brasileiros.
             </p>
+
+            <p>
+                Os indicadores são utilizados para fins de visualização
+                e análise exploratória dos dados disponíveis.
+            </p>
+        </section>
+
+        <!-- METODOLOGIA -->
+        <section class="informacao">
+            <h2>Metodologia e limitações</h2>
+
+            <p>
+                O dashboard utiliza registros do arquivo CSV do SINAN
+                referente ao ano de 2026.
+            </p>
+
+            <p>
+                Os registros contabilizados não representam necessariamente
+                casos confirmados ou totais epidemiológicos consolidados.
+                Os dados podem estar sujeitos a atualização, revisão,
+                duplicidade e inconsistências.
+            </p>
+
+            <p>
+                A identificação de óbitos utiliza um critério preliminar
+                baseado no campo de evolução do registro, não sendo
+                considerada uma contagem oficial consolidada.
+            </p>
+
+            <p>
+                A média mensal é calculada com base nos meses que possuem
+                registros no conjunto de dados processado.
+            </p>
+
         </section>
 
         <!-- FONTE -->
@@ -122,24 +159,23 @@
             <h2>Fonte dos dados</h2>
 
             <p id="statusDados">
-                <strong>Status:</strong> Protótipo em desenvolvimento.
+                Carregando dados...
             </p>
 
             <p>
-                Os indicadores exibidos atualmente utilizam dados simulados
-                para fins de desenvolvimento e demonstração.
+                Fonte: Sistema de Informação de Agravos de Notificação
+                (SINAN), Ministério da Saúde.
             </p>
 
             <p>
-                A fonte prevista para a versão final é o Sistema de Informação
-                de Agravos de Notificação (Sinan), disponibilizado pelo Ministério da Saúde.
+                Arquivo de dados de dengue referente a 2026.
             </p>
 
             <p>
                 <a href="https://dadosabertos.saude.gov.br/dataset/arboviroses-dengue"
                    target="_blank"
                    rel="noopener noreferrer">
-                    Consultar dados oficiais do Ministério da Saúde
+                    Consultar portal oficial de dados do Ministério da Saúde
                 </a>
             </p>
         </section>
